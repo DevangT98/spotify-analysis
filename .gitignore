@@ -1,0 +1,8 @@
+.env
+myenv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.json         # Optional: for GCP key file if present
