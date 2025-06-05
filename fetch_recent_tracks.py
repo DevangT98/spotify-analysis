@@ -4,11 +4,8 @@ import json
 from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyOAuth
 from publish_to_pubsub import publish_tracks_to_pubsub
-<<<<<<< HEAD
-=======
 
 load_dotenv()
->>>>>>> fix-local-changes
 
 
 def fetch_recent_tracks(limit=10):
