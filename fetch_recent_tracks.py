@@ -3,6 +3,7 @@ import spotipy
 import json
 from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyOAuth
+from publish_to_pubsub import publish_tracks_to_pubsub
 
 
 def fetch_recent_tracks(limit=10):
@@ -36,9 +37,9 @@ def fetch_recent_tracks(limit=10):
         print(
             f"{idx + 1}. {track['name']} by {artists} (Played at: {item['played_at']})"
         )
-
     return results["items"]
 
 
 if __name__ == "__main__":
-    fetch_recent_tracks()
+    tracks = fetch_recent_tracks()
+    publish_tracks_to_pubsub(tracks)
