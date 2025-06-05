@@ -5,4 +5,5 @@ __pycache__/
 *.pyo
 *.pyd
 *.log
-*.json         # Optional: for GCP key file if present
+*.json
+spotify-analysis-461923-02071b4e4189.json
