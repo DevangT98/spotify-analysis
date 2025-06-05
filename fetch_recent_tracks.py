@@ -5,11 +5,11 @@ from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyOAuth
 from publish_to_pubsub import publish_tracks_to_pubsub
 
+load_dotenv()
+
 
 def fetch_recent_tracks(limit=10):
     """Fetches the 10 most recent tracks played by the user."""
-
-    load_dotenv()
 
     CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
     CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
